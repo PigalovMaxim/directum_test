@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="./src/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="./src/libs/splide/splide.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:wght@100&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <title>Vite App</title>
+</head>
+
+<body>
+  <main class="w-full flex flex-col justify-start items-center">
+    <div class="w-full min-h-screen h-full overflow-x-hidden max-w-fullhd flex flex-col justify-start items-center">
+      <input id="modal-toggle" type="checkbox" class="hidden" />
+      <div class="modal hidden w-full h-full bg-black/70 justify-center items-center fixed top-0 left-0 z-10">
+        <div
+          class="flex flex-col justify-start items-start w-64 tablet:w-modalWidth bg-white shadow-modal p-8 relative">
+          <h2 class="text-modalTextColor text-2xl font-roboto mb-6">Регистрация</h2>
+          <input placeholder="ФИО" class="w-full border border-inputBorder px-2 mb-4 h-7" />
+          <input placeholder="Email" class="w-full border border-inputBorder px-2 mb-6 h-7" />
+          <label for="modal-toggle"
+            class="w-32 text-white cursor-pointer flex justify-center items-center mx-auto h-9 font-open-sans bg-buttonColor transition-colors text-base rounded hover:bg-buttonColorHover">
+            Регистрация
+          </label>
+          <label for="modal-toggle" class="absolute top-6 right-6 h-4 w-4 cursor-pointer">
+            <img src="./src/assets/cross.svg" alt="close" class="h-4 w-4" />
+          </label>
+        </div>
+      </div>
+      <section
+        class="firstSection flex justify-center items-center relative w-full phone:h-firstSectionHeightPhone tablet:h-firstSectionHeightTablet hd:h-firstSectionHeightPC bg-firstSectionBg">
+        <label for="nav-toggle" class="tablet:hidden absolute w-6 h-4 left-5 top-4 cursor-pointer">
+          <img src="./src/assets/burger-menu.svg" alt="burger menu" />
+        </label>
+        <input id="nav-toggle" type="checkbox" class="hidden" />
+        <nav
+          class="tablet:hidden hidden absolute z-10 left-0 top-0 w-full h-screen bg-white text-black flex-col justify-start items-start px-6 pt-14"
+          id="phoneNav">
+          <label class="text-black absolute left-5 top-4 cursor-pointer w-6 h-4 flex justify-center items-center"
+            for="nav-toggle">
+            Х
+          </label>
+          <li class="font-light cursor-pointer mb-2 h-9">О мероприятии</li>
+          <li class="font-light cursor-pointer mb-2 h-9">Регистрация</li>
+          <li class="font-light cursor-pointer mb-2 h-9">Стоимость участия</li>
+          <li class="font-light cursor-pointer h-9">Спикеры</li>
+        </nav>
+        <nav
+          class="w-full max-w-contentMaxWidth tablet:px-tabletHorizontalPadding h-12 flex justify-center items-center absolute top-8">
+          <ul class="w-full tablet:flex hidden flex-row justify-between items-center text-white">
+            <li class="font-light cursor-pointer">
+              <a href="#about">О мероприятии</a>
+            </li>
+            <li class="font-light cursor-pointer">
+              <label for="modal-toggle">Регистрация</label>
+            </li>
+            <li class="font-light cursor-pointer">
+              <a href="#costs">Стоимость участия</a>
+            </li>
+            <li class="font-light cursor-pointer">
+              <a href="#speakers">Спикеры</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="flex flex-col justify-start items-center text-white">
+          <img src="./src/assets/logo-image.svg" alt="logo" />
+          <h1 class="uppercase text-center mb-6 text-4xl mt-4 tablet:mt-12 tablet:mb-8 font-medium">НАЗВАНИЕ МЕРОПРИЯТИЯ
+          </h1>
+          <h3 class="uppercase text-center mb-4 tablet:mb-6 text-2xl">4 МАЯ 2049</h3>
+          <h3 class="text-center mb-8 tablet:mb-12 text-2xl">в самом сердце страны</h3>
+          <label for="modal-toggle"
+            class="w-52 h-14 flex cursor-pointer justify-center items-center font-open-sans bg-buttonColor transition-colors text-base rounded hover:bg-buttonColorHover">
+            Регистрация
+          </label>
+        </div>
+      </section>
+      <section id="about" class="w-full bg-grayBg flex justify-center items-center">
+        <div
+          class="w-full max-w-contentMaxWidth px-tabletHorizontalPadding hd:px-0 flex flex-col hd:flex-row justify-center items-start py-12">
+          <span
+            class="hidden tablet:flex leading-5 flex-col pb-12 hd:pb-0 hd:text-center hd:mr-7 hd:max-w-secondSectionTextMaxWidth">
+            Дорогие друзья!
+            <span class="my-4">
+              <strong>Lorem ipsum</strong> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+              ut
+              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+              dolore
+              eu fugiat nulla pariatur.
+            </span>
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum.
+          </span>
+          <div class="flex flex-col justify-start items-start w-full hd:w-fit">
+            <h2 class="text-3xl mb-4 tablet:w-full text-center font-medium">Регистрация</h2>
+            <span class="mb-4">Пожалуйста, проверьте правильность введенных данных:</span>
+            <span class="flex w-full flex-col tablet:hidden">
+              <span class="flex flex-row">ФИО: <div class="ml-4">Иванов Иван Иванович</div></span>
+              <span class="flex flex-row">Место работы: <div class="ml-4">DIRECTUM</div></span>
+              <span class="flex flex-row">E-mail: <div class="ml-4">ivanov_ii@directum.ru</div></span>
+            </span>
+            <span class="hidden flex-row tablet:flex">
+              <span class="w-40">
+                ФИО: <br />
+                Место работы: <br />
+                E-mail: <br />
+              </span>
+              <span>
+                Иванов Иван Иванович <br />
+                DIRECTUM <br />
+                ivanov_ii@directum.ru <br />
+              </span>
+            </span>
+          </div>
+        </div>
+      </section>
+      <section id="costs"
+        class="max-w-contentMaxWidth tablet:px-tabletHorizontalPadding hd:px-0 tablet: w-full flex flex-col justify-start items-center pt-12 pb-6">
+        <h2 class="text-3xl font-medium">Стоимость участия</h2>
+        <h3 class="mb-8">(на 1 человека)</h3>
+        <div class="w-full overflow-x-auto pl-tabletHorizontalPadding tablet:pl-0">
+          <table class="w-full min-w-tableMinWidth mr-tabletHorizontalPadding tablet:mr-0">
+            <tr class="h-tableRowHeight border-t border-tableBorderColor">
+              <td class="w-1/3 tablet:w-tableFirstCol pr-6"></td>
+              <td class="w-tableOtherCols pr-6">Стоимость ДО 1 января</td>
+              <td class="w-tableOtherCols">Стоимость ПОСЛЕ 1 января</td>
+            </tr>
+            <tr class="h-tableRowHeight border-t-2 border-tableBorderColor border-b">
+              <td class="pr-6">С проживанием в 2-местном номере</td>
+              <td class="pr-6">30 000 ₽</td>
+              <td>35 000 ₽</td>
+            </tr>
+            <tr class="h-tableRowHeight border-b border-tableBorderColor">
+              <td class="pr-6">Доплата за 1-местное проживание</td>
+              <td class="pr-6">500 ₽</td>
+              <td>1 500 ₽</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+      <section class="w-full bg-grayBg flex flex-col justify-center items-center pt-11">
+        <h2 class="text-3xl mb-9 text-center font-medium">Галерея</h2>
+        <div class="splide w-full">
+          <div class="splide__track w-full">
+            <ul class="splide__list w-full">
+              <li class="splide__slide w-full">
+                <img class="w-full h-full object-cover" src="./src/assets/slide-1.svg" alt="slide" />
+              </li>
+              <li class="splide__slide w-full">
+                <img class="w-full h-full object-cover" src="./src/assets/slide-2.svg" alt="slide" />
+              </li>
+              <li class="splide__slide w-full">
+                <img class="w-full h-full object-cover" src="./src/assets/slide-3.svg" alt="slide" />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="speakers" class="w-full flex flex-col justify-start items-center py-12">
+        <div class="w-full max-w-contentMaxWidth">
+          <h2 class="text-3xl mb-8 text-center font-medium">Наши спикеры</h2>
+          <div
+            class="w-full tablet:px-tabletHorizontalPadding hd:px-0 flex flex-row flex-wrap justify-center gap-x-8 gap-y-6 items-center">
+            <div class="flex flex-col justify-start items-center">
+              <img src="./src/assets/speaker.svg" alt="speaker" class="w-speakerAvatarSize rounded-full mb-2" />
+              <span class="text-xl font-medium mb-2">Детектив пикачу</span>
+              <span class="max-w-52 text-center">
+                уморительный, остроумный
+                и обаятельный сыщик
+              </span>
+            </div>
+            <div class="flex flex-col justify-start items-center">
+              <img src="./src/assets/speaker.svg" alt="speaker" class="w-speakerAvatarSize rounded-full mb-2" />
+              <span class="text-xl font-medium mb-2">Детектив пикачу</span>
+              <span class="max-w-52 text-center">
+                уморительный, остроумный
+                и обаятельный сыщик
+              </span>
+            </div>
+            <div class="flex flex-col justify-start items-center">
+              <img src="./src/assets/speaker.svg" alt="speaker" class="w-speakerAvatarSize rounded-full mb-2" />
+              <span class="text-xl font-medium mb-2">Детектив пикачу</span>
+              <span class="max-w-52 text-center">
+                уморительный, остроумный
+                и обаятельный сыщик
+              </span>
+            </div>
+            <div class="flex flex-col justify-start items-center">
+              <img src="./src/assets/speaker.svg" alt="speaker" class="w-speakerAvatarSize rounded-full mb-2" />
+              <span class="text-xl font-medium mb-2">Детектив пикачу</span>
+              <span class="max-w-52 text-center">
+                уморительный, остроумный
+                и обаятельный сыщик
+              </span>
+            </div>
+            <div class="flex flex-col justify-start items-center">
+              <img src="./src/assets/speaker.svg" alt="speaker" class="w-speakerAvatarSize rounded-full mb-2" />
+              <span class="text-xl font-medium mb-2">Детектив пикачу</span>
+              <span class="max-w-52 text-center">
+                уморительный, остроумный
+                и обаятельный сыщик
+              </span>
+            </div>
+            <div class="flex flex-col justify-start items-center">
+              <img src="./src/assets/speaker.svg" alt="speaker" class="w-speakerAvatarSize rounded-full mb-2" />
+              <span class="text-xl font-medium mb-2">Детектив пикачу</span>
+              <span class="max-w-52 text-center">
+                уморительный, остроумный
+                и обаятельный сыщик
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="bg-grayBg w-full flex flex-col justify-center items-center mt-auto h-footerHeight">
+        <div class="flex flex-col justify-start items-center">
+          <img src="./src/assets/logo-with-text.svg" alt="logo" class="mb-4" />
+          <span class="text-xs text-footerTextColor font-light text-center">© DIRECTUM, 2019</span>
+        </div>
+      </footer>
+    </div>
+  </main>
+  <script src="./src/libs/splide/splide.min.js"></script>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

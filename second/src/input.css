@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#modal-toggle:checked + .modal {
+  display: flex;
+}
+
+.firstSection :checked + #phoneNav {
+  display: flex;
+}
+
+.splide__pagination__page {
+  width: 30px !important;
+  height: 3px !important;
+  background: #E6B37A !important;
+  border-radius: 0 !important;
+  transform: unset !important;
+}
+
+.splide__pagination__page.is-active {
+  background: #FF8A00 !important;
+}
